@@ -1,0 +1,110 @@
+img#tytle {
+  background: #ffffff;
+  width: 1520px;
+  text-align: center;
+  border: 1px solid #cccccc;
+}
+
+div#header {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  width: 1300px;
+  background: #ff4500;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #cccccc;
+  position: absolute;
+  top: 135px;
+  left:110px ;
+}
+
+div#date {
+  font-size: 32px;
+  background: #f5deb3;
+  width: 270px;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #cccccc;
+  position: absolute;
+  top: 720px;
+  left:1180px ;
+}
+
+div#E1credit {
+  font-size: 28px;
+  background: #00ff7f;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #cccccc;
+  position: absolute;
+  top: 600px;
+  left:240px ;
+
+}
+
+div#E1 {
+  background: #ffffff;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #cccccc;
+  position: absolute;
+  top: 210px;
+  left:100px ;
+}
+
+div#E2credit {
+  font-size: 28px;
+  background: #00ff7f;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #cccccc;
+  position: absolute;
+  top: 600px;
+  left:860px ;
+}
+
+
+div#E2 {
+  background: #ffffff;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #cccccc;
+  position: absolute;
+  top: 210px;
+  left:800px ;
+
+}
+
+img#BGMcredit {
+  background: #ffffff;
+  text-align: center;
+  border: 1px solid #cccccc;
+  position: absolute;
+  top: 710px;
+  left:480px ;
+}
+
+div#QRinfo {
+  font-size: 17px;
+  background: #87cefa;
+  width: 160px;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #cccccc;
+  position: absolute;
+  top: 610px;
+  left:15px ;
+}
+
+img#QRcode {
+  background: #ffffff;
+  width: 160px;
+  height: 160px;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #cccccc;
+  position: absolute;
+  top: 680px;
+  left:15px ;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>エリア放送デモフレームパターン</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="demoFP.css" type="text/css">
+    <link href="http://vjs.zencdn.net/5.11.6/video-js.css" rel="stylesheet">
+    <script src="http://vjs.zencdn.net/5.11.6/video.js"></script>
+    <script>
+        function set2fig(num) {
+          // 桁数が1桁だったら先頭に0を加えて2桁に調整する
+          var ret;
+          if( num < 10 ) { ret = "0" + num; }
+          else { ret = num; }
+            return ret;
+          }
+          function showClock2() {
+            var nowTime = new Date();
+            var nowHour = set2fig( nowTime.getHours() );
+            var nowMin  = set2fig( nowTime.getMinutes() );
+            var nowSec  = set2fig( nowTime.getSeconds() );
+            var msg = "現在時刻</br>" + nowHour + ":" + nowMin + ":" + nowSec ;
+            document.getElementById("date").innerHTML = msg;
+            }
+            setInterval('showClock2()',1000);
+    </script>
+  </head>
+  <body>
+    <img  src="./image/title.jpg" id="tytle"></img>
+    <div id="header">仙台高専広瀬エリア放送(JOXZ2CM-AREA)ではオープンキャンパスの様子を生中継します</div>
+    <div id="date"></div>
+    <div id="E1credit">各ブースの様子(移動中継)</div>
+    <video id="E1" width=640 height=360 class="video-js vjs-default-skin" autoplay="autoplay" controls="controls" width="800" height="450" data-setup="{}">
+    <source src="rtmp://wakilab:owl3f3311@10.64.199.60/Live/Liveshell2" type="rtmp/mp4" />
+    </video>
+    <div id="E2credit">無線ネットワーク接続(Wi-Fi)のカメラ</div>
+    <video id="E2" width=640 height=360 class="video-js vjs-default-skin" autoplay="autoplay" controls="controls" width="800" height="450" data-setup="{}">
+    <source src="rtmp://wakilab:owl3f3311@10.64.199.45/Live/MobileCam" type="rtmp/mp4" />
+    </video>
+    <img src="./image/BGMcredit.jpg" id="BGMcredit"></div>
+    <div id="QRinfo">オープンキャンパス</br>詳細情報↓</div>
+    <img src="./image/HPQRcode.png" id="QRcode"></img>
+  </body>
+</html>
