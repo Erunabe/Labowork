@@ -1,8 +1,9 @@
-img#tytle {
+img#title {
   background: #ffffff;
   width: 1520px;
   text-align: center;
   border: 1px solid #cccccc;
+　top: -100px;
 }
 
 div#header {
@@ -43,7 +44,7 @@ div#E1credit {
 
 }
 
-div#E1 {
+video#video {
   background: #ffffff;
   padding: 10px;
   text-align: center;
