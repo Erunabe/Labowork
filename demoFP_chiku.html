@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<html>
+  <head>
+    <title>エリア放送デモフレームパターン</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="demoFP_chiku.css" type="text/css">
+    <script>
+        function set2fig(num) {
+          // 桁数が1桁だったら先頭に0を加えて2桁に調整する
+          var ret;
+          if( num < 10 ) { ret = "0" + num; }
+          else { ret = num; }
+            return ret;
+          }
+          function showClock2() {
+            var nowTime = new Date();
+            var nowHour = set2fig( nowTime.getHours() );
+            var nowMin  = set2fig( nowTime.getMinutes() );
+            var nowSec  = set2fig( nowTime.getSeconds() );
+            var msg = "現在時刻</br>" + nowHour + ":" + nowMin + ":" + nowSec ;
+            document.getElementById("date").innerHTML = msg;
+            }
+            setInterval('showClock2()',1000);
+    </script>
+  </head>
+  <body>
+
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <video  id="E1" width=768 height=432 controls></video>
+    <script>
+      if(Hls.isSupported()) {
+        var video = document.getElementById('E1');
+        var hls = new Hls();
+        hls.loadSource('http://10.64.199.58/live/hls/LiveShell2.m3u8');
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED,function() {
+          video.play();
+      });
+     }
+     // hls.js is not supported on platforms that do not have Media Source Extensions (MSE) enabled.
+     // When the browser has built-in HLS support (check using `canPlayType`), we can provide an HLS manifest (i.e. .m3u8 URL) directly to the video element throught the `src` property.
+     // This is using the built-in support of the plain video element, without using hls.js.
+      else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = 'http://10.64.199.58/live/hls/LiveShell2.m3u8';
+        video.addEventListener('canplay',function() {
+          video.play();
+        });
+      }
+    </script>
+
+
+    <img  src="./image/title_chiku.jpg" id="title"></img>
+    <div id="header">仙台高専広瀬エリア放送(JOXZ2CM-AREA)では宮城地区まつりの様子を生中継します</div>
+    <div id="date"></div>
+    <div id="E1credit">宮城地区まつり 会場の様子(宮城総合支所)</div>
+    <img src="./image/BGMcredit.jpg" id="BGMcredit"></div>
+    <div id="QRinfo">宮城地区まつり</br>詳細情報↓</div>
+    <img src="./image/HPQRcode_chiku.png" id="QRcode"></img>
+  </body>
+</html>
