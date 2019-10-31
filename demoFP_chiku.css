@@ -8,16 +8,16 @@ img#title {
 
 div#header {
   color: white;
-  font-size: 30px;
+  font-size: 33px;
   font-weight: bold;
-  width: 1300px;
+  width: 1500px;
   background: #ff4500;
   padding: 10px;
   text-align: center;
   border: 1px solid #cccccc;
   position: absolute;
-  top: 135px;
-  left:110px ;
+  top: 720px;
+  left:15px ;
 }
 
 div#date {
@@ -28,8 +28,8 @@ div#date {
   text-align: center;
   border: 1px solid #cccccc;
   position: absolute;
-  top: 720px;
-  left:1180px ;
+  top: 740px;
+  left:1210px ;
 }
 
 div#E1credit {
@@ -40,7 +40,7 @@ div#E1credit {
   border: 1px solid #cccccc;
   position: absolute;
   top: 670px;
-  left:500px ;
+  left:370px ;
 
 }
 
@@ -50,8 +50,8 @@ video#E1 {
   text-align: center;
   border: 1px solid #cccccc;
   position: absolute;
-  top: 210px;
-  left:380px ;
+  top: 135px;
+  left:15px ;
 }
 
 div#E2credit {
@@ -74,7 +74,26 @@ div#E2 {
   position: absolute;
   top: 210px;
   left:800px ;
+}
 
+img#poster {
+  background: #ffffff;
+  text-align: center;
+  border: 1px solid #cccccc;
+  position: absolute;
+  top: 135px;
+  left:1160px ;
+}
+
+img#logo {
+  background: #ffffff;
+  width: 180px;
+  height: 180px;
+  text-align: center;
+  border: 1px solid #cccccc;
+  position: absolute;
+  top: 680px;
+  left:1200px ;
 }
 
 img#BGMcredit {
@@ -83,7 +102,7 @@ img#BGMcredit {
   border: 1px solid #cccccc;
   position: absolute;
   top: 740px;
-  left:480px ;
+  left:340px ;
 }
 
 div#QRinfo {
@@ -95,7 +114,7 @@ div#QRinfo {
   border: 1px solid #cccccc;
   position: absolute;
   top: 610px;
-  left:15px ;
+  left:1200px ;
 }
 
 img#QRcode {
@@ -107,5 +126,5 @@ img#QRcode {
   border: 1px solid #cccccc;
   position: absolute;
   top: 680px;
-  left:15px ;
+  left:1200px ;
 }
